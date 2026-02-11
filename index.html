@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>살핌(Salpeem) - 학교 도입 제안</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/white.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700;800&family=Gamja+Flower&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --brand-growth: #C4785B;
+      --brand-growth-light: #D4967E;
+      --brand-earth: #8B7355;
+      --brand-earth-light: #A89478;
+      --brand-cream: #FDF8EF;
+      --brand-cream-dark: #F5EDE0;
+      --brand-green: #6B8F6B;
+      --brand-green-light: #8AAF8A;
+      --text-primary: #3D2E1F;
+      --text-secondary: #6B5B4D;
+      --text-muted: #9B8B7D;
+    }
+    .reveal { font-family: 'Pretendard', -apple-system, sans-serif; color: var(--text-primary); background: var(--brand-cream); }
+    .reveal .slides { text-align: left; }
+    .reveal .slides section { padding: 40px 60px; }
+    .reveal h1 { font-size: 2.4em; font-weight: 800; color: var(--brand-growth); margin-bottom: 0.3em; line-height: 1.2; }
+    .reveal h2 { font-size: 1.6em; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5em; line-height: 1.3; border-bottom: 3px solid var(--brand-growth-light); padding-bottom: 0.3em; display: inline-block; }
+    .reveal h3 { font-size: 1.2em; font-weight: 600; color: var(--brand-earth); margin-bottom: 0.4em; }
+    .reveal p, .reveal li { font-size: 0.85em; line-height: 1.7; color: var(--text-secondary); }
+    .reveal strong { color: var(--text-primary); font-weight: 600; }
+    .reveal em { color: var(--brand-growth); font-style: normal; font-weight: 600; }
+    .reveal ul { list-style: none; padding-left: 0; }
+    .reveal ul li { position: relative; padding-left: 1.5em; margin-bottom: 0.6em; }
+    .reveal ul li::before { content: ''; position: absolute; left: 0; top: 0.55em; width: 8px; height: 8px; background: var(--brand-growth-light); border-radius: 50%; }
+    .title-slide { text-align: center !important; display: flex !important; flex-direction: column; align-items: center; justify-content: center; }
+    .title-slide h1 { font-size: 3em; margin-bottom: 0.1em; }
+    .title-slide .subtitle { font-size: 1.3em; color: var(--brand-earth); font-weight: 500; margin-bottom: 2em; letter-spacing: 0.02em; }
+    .title-slide .tagline { font-family: 'Gamja Flower', cursive; font-size: 1.6em; color: var(--brand-growth); margin-bottom: 0.5em; }
+    .title-slide .meta { font-size: 0.7em; color: var(--text-muted); }
+    .quote-block { background: white; border-left: 5px solid var(--brand-growth); border-radius: 0 16px 16px 0; padding: 1.5em 2em; margin: 1em 0; box-shadow: 3px 3px 0px 0px var(--brand-cream-dark); }
+    .quote-block p { font-size: 1.1em; color: var(--text-primary); line-height: 1.8; margin: 0; }
+    .card-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 1em; }
+    .card { background: white; border: 2px solid var(--brand-cream-dark); border-radius: 16px; padding: 1.2em 1.4em; box-shadow: 3px 3px 0px 0px var(--brand-cream-dark); }
+    .card .card-icon { font-size: 1.8em; margin-bottom: 0.3em; }
+    .card .card-title { font-size: 0.9em; font-weight: 700; color: var(--text-primary); margin-bottom: 0.3em; }
+    .card .card-desc { font-size: 0.75em; color: var(--text-secondary); line-height: 1.5; }
+    .flow-container { display: flex; align-items: center; justify-content: center; gap: 12px; margin: 1.5em 0; flex-wrap: wrap; }
+    .flow-step { background: white; border: 2px solid var(--brand-growth-light); border-radius: 16px; padding: 1em 1.2em; text-align: center; min-width: 140px; box-shadow: 3px 3px 0px 0px rgba(196,120,91,0.15); }
+    .flow-step .step-icon { font-size: 1.6em; margin-bottom: 0.2em; }
+    .flow-step .step-title { font-size: 0.8em; font-weight: 700; color: var(--brand-growth); }
+    .flow-step .step-desc { font-size: 0.65em; color: var(--text-muted); margin-top: 0.2em; }
+    .flow-arrow { font-size: 1.5em; color: var(--brand-growth-light); font-weight: bold; }
+    .demo-cue { background: linear-gradient(135deg, var(--brand-growth), var(--brand-growth-light)); color: white; border-radius: 16px; padding: 1em 1.5em; margin: 1em 0; display: flex; align-items: center; gap: 12px; }
+    .demo-cue .cue-icon { font-size: 1.8em; }
+    .demo-cue .cue-text { font-size: 0.85em; font-weight: 500; color: white; }
+    .step-list { counter-reset: step; list-style: none; padding-left: 0; }
+    .step-list li { counter-increment: step; padding-left: 2.5em; margin-bottom: 1em; position: relative; }
+    .step-list li::before { content: counter(step); position: absolute; left: 0; top: 0; width: 1.8em; height: 1.8em; background: var(--brand-growth); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75em; font-weight: 700; }
+    .timeline { border-left: 3px solid var(--brand-growth-light); padding-left: 1.5em; margin: 1em 0; }
+    .timeline-item { margin-bottom: 1.2em; position: relative; }
+    .timeline-item::before { content: ''; position: absolute; left: -1.85em; top: 0.3em; width: 12px; height: 12px; background: var(--brand-growth); border-radius: 50%; border: 3px solid var(--brand-cream); }
+    .timeline-item .t-label { font-size: 0.7em; font-weight: 700; color: var(--brand-growth); text-transform: uppercase; }
+    .timeline-item .t-content { font-size: 0.8em; color: var(--text-secondary); line-height: 1.5; }
+    .concern-pair { background: white; border-radius: 16px; padding: 1em 1.4em; margin-bottom: 0.8em; border: 2px solid var(--brand-cream-dark); box-shadow: 3px 3px 0px 0px var(--brand-cream-dark); }
+    .concern-q { font-size: 0.85em; font-weight: 700; color: var(--text-primary); margin-bottom: 0.3em; }
+    .concern-a { font-size: 0.78em; color: var(--text-secondary); line-height: 1.6; padding-left: 1em; border-left: 3px solid var(--brand-green-light); }
+    .cta-box { background: linear-gradient(135deg, var(--brand-growth), #B06A4E); border-radius: 20px; padding: 2em; text-align: center; color: white; margin-top: 1em; }
+    .cta-box h3 { color: white; font-size: 1.4em; margin-bottom: 0.3em; }
+    .cta-box p { color: rgba(255,255,255,0.9); font-size: 0.9em; }
+    .reveal .slide-number { font-family: 'Pretendard', sans-serif; font-size: 14px; color: var(--text-muted); background: transparent; }
+    .center-text { text-align: center !important; }
+    .emphasis-box { background: white; border: 3px solid var(--brand-growth); border-radius: 16px; padding: 1em 1.5em; text-align: center; margin: 1em 0; box-shadow: 3px 3px 0px 0px rgba(196,120,91,0.2); }
+    .emphasis-box p { font-size: 1.15em; font-weight: 600; color: var(--brand-growth); margin: 0; }
+    .admin-benefit { display: flex; gap: 12px; align-items: flex-start; background: white; border-radius: 12px; padding: 0.8em 1em; margin-bottom: 0.6em; border: 2px solid var(--brand-cream-dark); }
+    .admin-benefit .ab-icon { font-size: 1.4em; flex-shrink: 0; }
+    .admin-benefit .ab-content { flex: 1; }
+    .admin-benefit .ab-title { font-size: 0.82em; font-weight: 700; color: var(--text-primary); }
+    .admin-benefit .ab-desc { font-size: 0.72em; color: var(--text-secondary); line-height: 1.4; }
+    .handwriting { font-family: 'Gamja Flower', cursive; color: var(--brand-growth); }
+    @media (max-width: 768px) {
+      .reveal .slides section { padding: 20px 30px; }
+      .card-grid { grid-template-columns: 1fr; }
+      .flow-container { flex-direction: column; }
+      .flow-arrow { transform: rotate(90deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- Slide 1: Title -->
+      <section class="title-slide">
+        <div class="tagline">🌱 학생의 모든 성장을, 모두가 함께 기록하는</div>
+        <h1>살핌</h1>
+        <div class="subtitle">기록은 수업 속으로, 생기부는 기록에서.</div>
+        <div class="meta">
+          학교 도입 제안 &middot; 2026<br>
+          <span style="font-size:0.85em; color: var(--text-muted);">관리자 대상</span>
+        </div>
+      </section>
+
+      <!-- Slide 2: Empathy / Opening -->
+      <section>
+        <h2>선생님들의 아쉬움</h2>
+        <div class="quote-block">
+          <p>
+            "분명 그 아이가 그때 정말 많이 성장했는데,<br>
+            내가 그 장면을 제대로 남겨두지 못했구나."
+          </p>
+        </div>
+        <p style="margin-top: 1.2em; font-size: 0.95em;">
+          학생을 <em>덜 본 게 아닙니다.</em><br>
+          너무 바빠서 <strong>'남길 틈'이 없어서</strong> 기록이 사라지는 겁니다.
+        </p>
+        <p style="font-size: 0.82em; color: var(--text-muted); margin-top: 1em;">
+          살핌은 "기록을 더 하자"가 아니라,<br>
+          이미 하고 있는 <strong>관찰과 돌봄</strong>이 사라지지 않게 붙잡아두는 도구입니다.
+        </p>
+      </section>
+
+      <!-- Slide 3: 4 Problems -->
+      <section>
+        <h2>현장에서 기록이 무너지는 이유</h2>
+        <div class="card-grid">
+          <div class="card">
+            <div class="card-icon">⏱️</div>
+            <div class="card-title">기록할 시간이 없다</div>
+            <div class="card-desc">수업 중엔 관찰은 가능하지만, 기록은 뒤로 밀린다</div>
+          </div>
+          <div class="card">
+            <div class="card-icon">🧠</div>
+            <div class="card-title">기억이 희미해진다</div>
+            <div class="card-desc">학기말엔 몇 달 전 학생의 구체적 모습을 떠올리기 어렵다</div>
+          </div>
+          <div class="card">
+            <div class="card-icon">📂</div>
+            <div class="card-title">기록이 흩어진다</div>
+            <div class="card-desc">수첩, 메신저, 엑셀... 분산된 기록을 다시 찾기 어렵다</div>
+          </div>
+          <div class="card">
+            <div class="card-icon">✍️</div>
+            <div class="card-title">이중 업무가 생긴다</div>
+            <div class="card-desc">기록을 생기부 문장으로 옮기는 반복 작업이 추가된다</div>
+          </div>
+        </div>
+        <p style="font-size: 0.78em; color: var(--text-muted); text-align: center; margin-top: 1em;">
+          결과: 학생의 성장은 실제보다 '평면'으로 남고, 교사는 학기말에 몰아서 일하게 됩니다
+        </p>
+      </section>
+
+      <!-- Slide 4: Educational Value -->
+      <section>
+        <h2>기록은 '평가'가 아니라 '성장'의 기술</h2>
+        <ul>
+          <li>
+            <strong>형성 피드백</strong><br>
+            <span style="font-size:0.85em;">"잘했어" 대신 "무엇이 어떻게 달라졌는지" 말할 수 있습니다</span>
+          </li>
+          <li>
+            <strong>조용한 학생 가시화</strong><br>
+            <span style="font-size:0.85em;">작은 변화를 축적하면, 눈에 띄지 않던 학생이 보이기 시작합니다</span>
+          </li>
+          <li>
+            <strong>기록의 공정성</strong><br>
+            <span style="font-size:0.85em;">기억과 인상이 아닌 '관찰된 사실'이 쌓일수록 기록은 더 정확해집니다</span>
+          </li>
+          <li>
+            <strong>교사 전문성 보호</strong><br>
+            <span style="font-size:0.85em;">상담/민원/협의에서 "그때의 근거"가 있으면 교사가 보호됩니다</span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Slide 5: Solution - Flow -->
+      <section>
+        <h2>살핌이 바꾸는 흐름</h2>
+        <div class="emphasis-box">
+          <p>한 번 기록하면, 여러 업무가 풀립니다</p>
+        </div>
+        <div class="flow-container">
+          <div class="flow-step">
+            <div class="step-icon">✏️</div>
+            <div class="step-title">입력</div>
+            <div class="step-desc">빠른 입력<br>캡처 워크스페이스<br>클래스룸 제출</div>
+          </div>
+          <div class="flow-arrow">&rarr;</div>
+          <div class="flow-step">
+            <div class="step-icon">📚</div>
+            <div class="step-title">축적</div>
+            <div class="step-desc">누가기록 저장소<br>학생 포트폴리오<br>자동 분류</div>
+          </div>
+          <div class="flow-arrow">&rarr;</div>
+          <div class="flow-step">
+            <div class="step-icon">📝</div>
+            <div class="step-title">활용</div>
+            <div class="step-desc">성장 타임라인<br>생기부 초안&rarr;최종<br>AI 보조 분석</div>
+          </div>
+        </div>
+        <p style="font-size: 0.78em; color: var(--text-muted); text-align: center; margin-top: 0.8em;">
+          교사 기록 + 학생 산출물 &rarr; 학생별 자동 축적 &rarr; 담당 초안 &rarr; 담임 최종 확정
+        </p>
+      </section>
+
+      <!-- Slide 6: Demo Guide -->
+      <section>
+        <h2>시연: 4단계 흐름</h2>
+        <div class="demo-cue">
+          <div class="cue-icon">🖥️</div>
+          <div class="cue-text">여기서 실제 앱 화면으로 전환합니다</div>
+        </div>
+        <ol class="step-list">
+          <li>
+            <strong>수업 직후 30초 기록</strong><br>
+            <span style="font-size:0.82em;">대시보드에서 학생 선택 &rarr; 한 줄 사실 기록 &rarr; 영역 지정</span>
+          </li>
+          <li>
+            <strong>누가기록 축적 확인</strong><br>
+            <span style="font-size:0.82em;">기간/영역/키워드로 검색, 보완, 관리</span>
+          </li>
+          <li>
+            <strong>학생별 성장 타임라인</strong><br>
+            <span style="font-size:0.82em;">"이전 &rarr; 현재 &rarr; 다음" 관점으로 누적 확인</span>
+          </li>
+          <li>
+            <strong>생기부 문장 연결</strong><br>
+            <span style="font-size:0.82em;">담당 교사 초안 &rarr; 담임 통합 &rarr; 최종 확정</span>
+          </li>
+        </ol>
+      </section>
+
+      <!-- Slide 7: Admin Benefits -->
+      <section>
+        <h2>학교 경영 관점의 이점</h2>
+        <div class="admin-benefit">
+          <div class="ab-icon">👩‍🏫</div>
+          <div class="ab-content">
+            <div class="ab-title">교사 업무 부담 경감</div>
+            <div class="ab-desc">학기말 생기부 작성 시간 단축 &rarr; 교사 만족도 향상, 수업 집중도 제고</div>
+          </div>
+        </div>
+        <div class="admin-benefit">
+          <div class="ab-icon">📊</div>
+          <div class="ab-content">
+            <div class="ab-title">기록 품질 향상</div>
+            <div class="ab-desc">사실 기반 기록 &rarr; 학생별 맞춤 생기부 &rarr; 학교 교육력 제고</div>
+          </div>
+        </div>
+        <div class="admin-benefit">
+          <div class="ab-icon">🛡️</div>
+          <div class="ab-content">
+            <div class="ab-title">민원/감사 대응력 강화</div>
+            <div class="ab-desc">시점별 관찰 근거가 축적 &rarr; 기록 기반 소명 가능</div>
+          </div>
+        </div>
+        <div class="admin-benefit">
+          <div class="ab-icon">🔒</div>
+          <div class="ab-content">
+            <div class="ab-title">개인정보 보호 체계</div>
+            <div class="ab-desc">최소 수집/최소 열람 원칙, 역할별 접근 제어, TLS 암호화</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 8: Concerns -->
+      <section>
+        <h2>우려 사항에 대한 답변</h2>
+        <div class="concern-pair">
+          <div class="concern-q">😟 "결국 교사에게 일이 더 늘어나는 것 아닌가요?"</div>
+          <div class="concern-a">
+            목표는 기록을 늘리는 것이 아니라 <em>학기말 옮겨쓰기 시간을 줄이는 것</em>입니다.<br>
+            파일럿에서 '기록 시간'과 '학기말 정리 시간'을 함께 측정합니다.
+          </div>
+        </div>
+        <div class="concern-pair">
+          <div class="concern-q">🔐 "개인정보와 민원 리스크는?"</div>
+          <div class="concern-a">
+            도입을 기능만이 아니라 <em>원칙 + 운영</em>으로 묶습니다.<br>
+            최소 수집/최소 열람, 사실 중심 기록 가이드, 보관/정정 프로토콜을 학교 합의로 세팅합니다.
+          </div>
+        </div>
+        <div class="concern-pair">
+          <div class="concern-q">🤖 "AI가 대신 쓰면 위험하지 않나요?"</div>
+          <div class="concern-a">
+            AI는 초안을 <em>제안</em>할 뿐, 최종 결정은 반드시 교사가 합니다.<br>
+            일부 AI 처리에서는 학생 이름을 마스킹하여 개인정보 노출을 최소화합니다.
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 9: Adoption Strategy -->
+      <section>
+        <h2>도입 전략: 파일럿 &rarr; 확산</h2>
+        <p style="font-size: 0.85em; margin-bottom: 1em;">전교 일괄 도입이 아닌, <em>검증 후 확장</em> 방식입니다.</p>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="t-label">Stage 0 — 준비 (2주)</div>
+            <div class="t-content">
+              챔피언 교사 2~5명 선정 (담임 1명 포함)<br>
+              기록 가이드 합의 + 30분 온보딩
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="t-label">Stage 1 — 파일럿 (4~8주)</div>
+            <div class="t-content">
+              한 학년/한 팀 대상 운영<br>
+              커버리지 70%+, 기록 1건 60초 이하 목표<br>
+              <span style="color: var(--brand-green); font-weight:600;">* 커버리지 지표는 개인평가로 사용하지 않음</span>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="t-label">Stage 2 — 학년 확장 (1학기)</div>
+            <div class="t-content">
+              월 1회 기록 예시 공유 (품질 캘리브레이션)<br>
+              운영 규정을 학교 문서로 고도화
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 10: CTA / Closing -->
+      <section class="center-text">
+        <h2 style="display: block; border: none; text-align: center;">오늘 부탁드리는 것</h2>
+        <div class="cta-box">
+          <h3>4~8주 파일럿 승인</h3>
+          <p>한 학년 또는 한 팀에서 시작합니다.<br>
+          전교 확장은 파일럿 결과를 보고 결정합니다.</p>
+        </div>
+        <div style="margin-top: 2em;">
+          <div class="quote-block" style="text-align: center;">
+            <p style="font-size: 1em;">
+              선생님이 학생을 잘 보지 못해서 기록이 없는 게 아닙니다.<br>
+              <strong>남길 틈이 없어서</strong> 기록이 사라지는 겁니다.<br><br>
+              <span class="handwriting" style="font-size: 1.3em;">
+                학생을 제대로 살피는 것이 곧 업무를 줄이는 길입니다.
+              </span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      slideNumber: 'c/t',
+      width: 1200,
+      height: 700,
+      margin: 0.04,
+      transition: 'slide',
+      transitionSpeed: 'default',
+      controls: true,
+      progress: true,
+      center: false,
+      touch: true,
+    });
+  </script>
+</body>
+</html>
