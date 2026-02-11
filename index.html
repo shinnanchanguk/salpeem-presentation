@@ -575,133 +575,129 @@
         </ul>
       </section>
 
-      <!-- Slide 5: Solution - Flow -->
+      <!-- Slide 5: 워크플로우 시각화 - 두 핵심 축 -->
       <section>
-        <h2>살핌이 바꾸는 흐름</h2>
-        <div class="emphasis-box">
-          <p>한 번 기록하면, 여러 업무가 풀립니다</p>
+        <h2>살핌의 핵심 워크플로우</h2>
+        <p style="font-size:0.82em; color:var(--text-secondary); margin-bottom:0.6em;">한 번 기록하면, <em>학생 이해</em>와 <em>생기부 완성</em>이 동시에 풀립니다.</p>
+        <div style="display:grid; grid-template-columns:1fr auto 1fr auto 1fr; align-items:center; gap:8px; margin-top:0.3em;">
+          <!-- 입력 영역 -->
+          <div style="background:white; border:2px solid var(--brand-cream-dark); border-radius:16px; padding:0.7em; box-shadow:3px 3px 0px 0px var(--brand-cream-dark);">
+            <div style="font-size:0.75em; font-weight:700; color:var(--brand-earth); margin-bottom:0.4em; text-align:center;">기록 & 활동</div>
+            <div style="font-size:0.68em; color:var(--text-secondary); line-height:1.6;">
+              <div style="margin-bottom:0.3em;">✏️ <strong>빠른 관찰 기록</strong><br><span style="color:var(--text-muted);">수업 직후 30초, 한 줄 사실 기록</span></div>
+              <div style="margin-bottom:0.3em;">📎 <strong>클래스룸 활동</strong><br><span style="color:var(--text-muted);">과제·토론 제출 → 자동 연결</span></div>
+              <div>📷 <strong>캡처 워크스페이스</strong><br><span style="color:var(--text-muted);">심층 관찰, 다수 학생 동시 기록</span></div>
+            </div>
+          </div>
+          <!-- 화살표 -->
+          <div style="font-size:1.8em; color:var(--brand-growth-light); font-weight:bold;">→</div>
+          <!-- 축적 영역 -->
+          <div style="background:linear-gradient(135deg, rgba(196,120,91,0.08), rgba(139,115,85,0.08)); border:2px solid var(--brand-growth-light); border-radius:16px; padding:0.7em; text-align:center;">
+            <div style="font-size:1.4em; margin-bottom:0.15em;">📚</div>
+            <div style="font-size:0.78em; font-weight:700; color:var(--brand-growth); margin-bottom:0.2em;">누가기록 저장소</div>
+            <div style="font-size:0.65em; color:var(--text-secondary); line-height:1.5;">
+              학생별 자동 분류<br>
+              관찰 기록 + 포트폴리오<br>
+              영역·활동·기간별 검색
+            </div>
+          </div>
+          <!-- 화살표 -->
+          <div style="font-size:1.8em; color:var(--brand-growth-light); font-weight:bold;">→</div>
+          <!-- 두 핵심 축 -->
+          <div style="display:flex; flex-direction:column; gap:8px;">
+            <div style="background:white; border:3px solid var(--brand-green); border-radius:16px; padding:0.55em 0.7em; box-shadow:3px 3px 0px 0px rgba(107,143,107,0.2);">
+              <div style="font-size:0.72em; font-weight:700; color:var(--brand-green);">👤 학생 프로필</div>
+              <div style="font-size:0.6em; color:var(--text-secondary); line-height:1.4;">
+                모든 교사의 관찰을 통합<br>
+                AI 분석 · 성장 타임라인
+              </div>
+            </div>
+            <div style="background:white; border:3px solid var(--brand-growth); border-radius:16px; padding:0.55em 0.7em; box-shadow:3px 3px 0px 0px rgba(196,120,91,0.2);">
+              <div style="font-size:0.72em; font-weight:700; color:var(--brand-growth);">📝 생기부 완성</div>
+              <div style="font-size:0.6em; color:var(--text-secondary); line-height:1.4;">
+                담당 교사 초안 → 담임 최종<br>
+                AI 협업 · 자동 검수
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="flow-container">
-          <div class="flow-step">
-            <div class="step-icon">✏️</div>
-            <div class="step-title">입력</div>
-            <div class="step-desc">빠른 입력<br>캡처 워크스페이스<br>클래스룸 제출</div>
-          </div>
-          <div class="flow-arrow">→</div>
-          <div class="flow-step">
-            <div class="step-icon">📚</div>
-            <div class="step-title">축적</div>
-            <div class="step-desc">누가기록 저장소<br>학생 포트폴리오<br>자동 분류</div>
-          </div>
-          <div class="flow-arrow">→</div>
-          <div class="flow-step">
-            <div class="step-icon">📝</div>
-            <div class="step-title">활용</div>
-            <div class="step-desc">성장 타임라인<br>생기부 초안→최종<br>AI 보조 분석</div>
-          </div>
+        <div class="emphasis-box" style="margin-top:0.6em; padding:0.5em 1em;">
+          <p style="font-size:0.85em;">기록하면, 학생 이해와 생기부가 동시에 완성됩니다</p>
         </div>
-        <p style="font-size: 0.78em; color: var(--text-muted); text-align: center; margin-top: 0.8em;">
-          교사 기록 + 학생 산출물 → 학생별 자동 축적 → 담당 초안 → 담임 최종 확정
-        </p>
       </section>
 
-      <!-- Slide 6: Demo Guide -->
+      <!-- Slide 6: 핵심 기능 ① 생기부 작성 -->
       <section>
-        <h2>시연: 4단계 흐름</h2>
-        <div class="demo-cue">
-          <div class="cue-icon">🖥️</div>
-          <div class="cue-text">여기서 실제 앱 화면으로 전환합니다</div>
-        </div>
-        <ol class="step-list">
-          <li>
-            <strong>수업 직후 30초 기록</strong><br>
-            <span style="font-size:0.82em;">대시보드에서 학생 선택 → 한 줄 사실 기록 → 영역 지정</span>
-          </li>
-          <li>
-            <strong>누가기록 축적 확인</strong><br>
-            <span style="font-size:0.82em;">기간/영역/키워드로 검색, 보완, 관리</span>
-          </li>
-          <li>
-            <strong>학생별 성장 타임라인</strong><br>
-            <span style="font-size:0.82em;">"이전 → 현재 → 다음" 관점으로 누적 확인</span>
-          </li>
-          <li>
-            <strong>생기부 문장 연결</strong><br>
-            <span style="font-size:0.82em;">담당 교사 초안 → 담임 통합 → 최종 확정</span>
-          </li>
-        </ol>
-      </section>
-
-      <!-- Slide 7: 생기부 통합 관리 -->
-      <section>
-        <h2>생기부, 한눈에 관리하고 AI와 함께 완성합니다</h2>
-        <div class="card-grid" style="gap:10px; margin-top:0.4em;">
-          <div class="card" style="padding:0.65em 0.9em;">
-            <div class="card-icon" style="font-size:1.3em; margin-bottom:0.1em;">📋</div>
+        <h2 style="font-size:1.35em;">핵심 기능 ①  생기부 통합 작성</h2>
+        <div class="card-grid" style="gap:10px; margin-top:0.3em;">
+          <div class="card" style="padding:0.6em 0.8em;">
+            <div class="card-icon" style="font-size:1.2em; margin-bottom:0.1em;">📋</div>
             <div class="card-title">통합 대시보드</div>
-            <div class="card-desc">자율·진로·개세특·과세특·행발 모든 영역을 한 화면에서 확인. NEIS 기준 바이트 수 실시간 체크.</div>
+            <div class="card-desc">자율·진로·개세특·과세특·행발 모든 영역을 한 화면에서 관리. NEIS 기준 바이트 수(한글 3B, 영문 1B) 실시간 체크.</div>
           </div>
-          <div class="card" style="padding:0.65em 0.9em;">
-            <div class="card-icon" style="font-size:1.3em; margin-bottom:0.1em;">✅</div>
+          <div class="card" style="padding:0.6em 0.8em;">
+            <div class="card-icon" style="font-size:1.2em; margin-bottom:0.1em;">🔗</div>
+            <div class="card-title">클래스룸 연동</div>
+            <div class="card-desc">과제 제출물이 학생 포트폴리오로 자동 생성. 과제 안내·학생 응답·교사 피드백이 관찰 기록에 맥락으로 첨부.</div>
+          </div>
+          <div class="card" style="padding:0.6em 0.8em;">
+            <div class="card-icon" style="font-size:1.2em; margin-bottom:0.1em;">🤖</div>
+            <div class="card-title">AI 초안 생성</div>
+            <div class="card-desc">축적된 관찰 기록을 선택하면 AI가 생기부 초안을 작성. 교사가 직접 수정·보완하여 최종 확정.</div>
+          </div>
+          <div class="card" style="padding:0.6em 0.8em;">
+            <div class="card-icon" style="font-size:1.2em; margin-bottom:0.1em;">✅</div>
             <div class="card-title">자동 검수</div>
-            <div class="card-desc">기재금지어('대회' 등) 자동 검출, 명사형 어미 점검, 바이트 초과 경고. 매뉴얼 준수를 시스템이 보조.</div>
-          </div>
-          <div class="card" style="padding:0.65em 0.9em;">
-            <div class="card-icon" style="font-size:1.3em; margin-bottom:0.1em;">🔗</div>
-            <div class="card-title">누가기록 + 클래스룸 통합</div>
-            <div class="card-desc">교사의 관찰 기록과 클래스룸 과제 제출물이 학생별로 자동 연결. 모든 기록이 생기부에 반영.</div>
-          </div>
-          <div class="card" style="padding:0.65em 0.9em;">
-            <div class="card-icon" style="font-size:1.3em; margin-bottom:0.1em;">🤖</div>
-            <div class="card-title">AI 협업 (RAG 챗봇)</div>
-            <div class="card-desc">축적된 관찰 데이터 기반 AI 챗봇이 초안 작성을 보조. 교사가 설정한 품질 기준에 맞춰 지속 정교화.</div>
+            <div class="card-desc">기재금지어('대회' 등) 자동 검출, 명사형 어미 점검, 영역별 바이트 초과 경고. 매뉴얼 준수를 시스템이 보조.</div>
           </div>
         </div>
-        <div class="emphasis-box" style="margin-top:0.4em; padding:0.5em 1em;">
-          <p style="font-size:0.82em;">"자동으로 생기부를 쓰는 것이 아닙니다.<br>교사의 디테일한 관찰을 바탕으로, AI와 협업하여 정교화합니다."</p>
+        <div class="demo-cue" style="margin-top:0.5em; padding:0.6em 1em;">
+          <div class="cue-icon">🖥️</div>
+          <div class="cue-text">시연: 관찰기록 선택 → AI 초안 생성 → 검수 → 담당 초안 → 담임 최종 확정</div>
+        </div>
+        <div class="emphasis-box" style="margin-top:0.4em; padding:0.4em 1em;">
+          <p style="font-size:0.8em;">"자동으로 생기부를 쓰는 것이 아닙니다. 교사의 관찰을 바탕으로, AI와 협업합니다."</p>
         </div>
       </section>
 
-      <!-- Slide 8: 학생 프로필 -->
+      <!-- Slide 7: 핵심 기능 ② 학생 프로필 -->
       <section>
-        <h2>모든 교사가 모든 학생을 잘 알 수 있습니다</h2>
-        <div class="quote-block" style="padding:0.7em 1.2em; margin:0.4em 0;">
-          <p style="font-size:0.88em; line-height:1.6;">
-            비담임이어도, 수업시수가 적어도, 처음 맡는 아이여도<br>
-            <strong>언제든 모든 교사의 관찰 기록</strong>을 스마트하게 파악할 수 있습니다.
+        <h2 style="font-size:1.35em;">핵심 기능 ②  학생 프로필</h2>
+        <div class="quote-block" style="padding:0.6em 1em; margin:0.3em 0;">
+          <p style="font-size:0.85em; line-height:1.5;">
+            비담임이어도, 수업시수가 적어도, 처음 맡는 아이여도 —<br>
+            <strong>모든 교사의 관찰 기록</strong>을 한 화면에서 스마트하게 파악할 수 있습니다.
           </p>
         </div>
-        <div class="admin-benefit" style="margin-bottom:0.4em; padding:0.6em 0.8em;">
-          <div class="ab-icon">👤</div>
-          <div class="ab-content">
-            <div class="ab-title">학생 프로필 통합 조회</div>
-            <div class="ab-desc">학생별 관찰 기록, 포트폴리오, 활동 이력을 한 화면에서 확인</div>
+        <div class="card-grid" style="gap:8px; margin-top:0.3em;">
+          <div class="card" style="padding:0.55em 0.8em;">
+            <div class="card-icon" style="font-size:1.1em; margin-bottom:0.1em;">👤</div>
+            <div class="card-title" style="font-size:0.82em;">통합 프로필 조회</div>
+            <div class="card-desc">관찰 타임라인, 포트폴리오, 활동 이력, 영역별 분석을 탭으로 전환하며 한 화면에서 확인합니다.</div>
+          </div>
+          <div class="card" style="padding:0.55em 0.8em;">
+            <div class="card-icon" style="font-size:1.1em; margin-bottom:0.1em;">👩‍🏫</div>
+            <div class="card-title" style="font-size:0.82em;">교사 간 관찰 공유</div>
+            <div class="card-desc">담임·담당 교사의 기록이 학생 중심으로 통합됩니다. 같은 아이를 다른 시선으로 볼 수 있습니다.</div>
+          </div>
+          <div class="card" style="padding:0.55em 0.8em;">
+            <div class="card-icon" style="font-size:1.1em; margin-bottom:0.1em;">🤖</div>
+            <div class="card-title" style="font-size:0.82em;">AI 학생 분석 챗봇</div>
+            <div class="card-desc">"이 학생의 최근 성장을 요약해줘" — 축적된 관찰 데이터 기반 AI가 응답하고, 근거 기록을 인용합니다.</div>
+          </div>
+          <div class="card" style="padding:0.55em 0.8em;">
+            <div class="card-icon" style="font-size:1.1em; margin-bottom:0.1em;">📅</div>
+            <div class="card-title" style="font-size:0.82em;">학년 연속성</div>
+            <div class="card-desc">학년이 바뀌어도 축적된 성장 기록은 유지됩니다. 새 담임도 빠르게 학생을 파악할 수 있습니다.</div>
           </div>
         </div>
-        <div class="admin-benefit" style="margin-bottom:0.4em; padding:0.6em 0.8em;">
-          <div class="ab-icon">👩‍🏫</div>
-          <div class="ab-content">
-            <div class="ab-title">교사 간 관찰 공유</div>
-            <div class="ab-desc">담임·담당 교사의 기록이 학생 중심으로 통합 — 같은 아이를 다른 시선으로</div>
-          </div>
-        </div>
-        <div class="admin-benefit" style="margin-bottom:0.4em; padding:0.6em 0.8em;">
-          <div class="ab-icon">📅</div>
-          <div class="ab-content">
-            <div class="ab-title">새 학기 연속성</div>
-            <div class="ab-desc">학년이 바뀌어도 축적된 성장 기록이 이어짐 — 새 담임도 빠르게 학생 파악</div>
-          </div>
-        </div>
-        <div class="admin-benefit" style="margin-bottom:0.4em; padding:0.6em 0.8em;">
-          <div class="ab-icon">🌱</div>
-          <div class="ab-content">
-            <div class="ab-title">진짜 '살핌' 실현</div>
-            <div class="ab-desc">업무 편의를 넘어, 학생 한 명 한 명을 온전히 이해하는 학교 문화</div>
-          </div>
+        <div class="demo-cue" style="margin-top:0.4em; padding:0.6em 1em;">
+          <div class="cue-icon">🖥️</div>
+          <div class="cue-text">시연: 학생 프로필 조회 → 통합 피드 → AI 챗봇 질의 → 인사이트 확인</div>
         </div>
       </section>
 
-      <!-- Slide 9: 보안 · 개인정보 · AI 데이터 정책 -->
+      <!-- Slide 8: 보안 · 개인정보 · AI 데이터 정책 -->
       <section>
         <h2 style="font-size:1.15em; margin-bottom:0.1em;">보안 · 개인정보 · AI 데이터 정책</h2>
         <div style="display:grid; grid-template-columns:1fr 1fr; gap:7px;">
@@ -748,45 +744,10 @@
         </div>
       </section>
 
-      <!-- Slide 10: Adoption Strategy -->
-      <section>
-        <h2>도입 전략: 파일럿 → 확산</h2>
-        <p style="font-size: 0.85em; margin-bottom: 1em;">전교 일괄 도입이 아닌, <em>검증 후 확장</em> 방식입니다.</p>
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="t-label">Stage 0 — 준비 (2주)</div>
-            <div class="t-content">
-              챔피언 교사 2~5명 선정 (담임 1명 포함)<br>
-              기록 가이드 합의 + 30분 온보딩
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="t-label">Stage 1 — 파일럿 (4~8주)</div>
-            <div class="t-content">
-              한 학년/한 팀 대상 운영<br>
-              커버리지 70%+, 기록 1건 60초 이하 목표<br>
-              <span style="color: var(--brand-green); font-weight:600;">* 커버리지 지표는 개인평가로 사용하지 않음</span>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="t-label">Stage 2 — 학년 확장 (1학기)</div>
-            <div class="t-content">
-              월 1회 기록 예시 공유 (품질 캘리브레이션)<br>
-              운영 규정을 학교 문서로 고도화
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Slide 11: CTA / Closing -->
+      <!-- Slide 9: CTA / Closing -->
       <section class="center-text">
-        <h2 style="display: block; border: none; text-align: center;">오늘 부탁드리는 것</h2>
-        <div class="cta-box">
-          <h3>4~8주 파일럿 승인</h3>
-          <p>한 학년 또는 한 팀에서 시작합니다.<br>
-          전교 확장은 파일럿 결과를 보고 결정합니다.</p>
-        </div>
-        <div style="margin-top: 1em;">
+        <h2 style="display: block; border: none; text-align: center;">함께 만들어가는 살핌</h2>
+        <div style="margin-top: 0.8em;">
           <div class="quote-block" style="text-align: center;">
             <p style="font-size: 1em;">
               선생님이 학생을 잘 보지 못해서 기록이 없는 게 아닙니다.<br>
@@ -797,12 +758,20 @@
             </p>
           </div>
         </div>
-        <div style="margin-top: 0.5em;">
-          <div style="background:white; border:2px solid var(--brand-cream-dark); border-radius:12px; padding:0.5em 1em; text-align:center;">
-            <p style="font-size:0.72em; color:var(--text-secondary); line-height:1.5; margin:0;">
-              클래스룸 확장, R&E 연구 연계, 학교 특색 활동 등 — <strong>모든 기능은 학교 구성원의 의견을 적극 반영</strong>하여 함께 만들어갑니다.<br>
-              관찰에서 인사이트, 생기부 완성까지의 흐름을 <strong>우리 학교에 맞게 설계</strong>할 수 있습니다.
+        <div style="margin-top: 0.8em;">
+          <div style="background:white; border:3px solid var(--brand-growth); border-radius:16px; padding:0.8em 1.2em; text-align:center; box-shadow:3px 3px 0px 0px rgba(196,120,91,0.15);">
+            <p style="font-size:0.82em; color:var(--text-primary); line-height:1.7; margin:0;">
+              클래스룸 확장, R&E 연구 연계, 학교 특색 활동 반영 —<br>
+              <strong>모든 기능은 학교 구성원의 의견을 적극 반영</strong>하여 함께 만들어갑니다.<br>
+              관찰에서 인사이트, 생기부 완성까지의 흐름을<br>
+              <em>우리 학교에 맞게 설계</em>할 수 있습니다.
             </p>
+          </div>
+        </div>
+        <div style="margin-top: 0.8em;">
+          <div class="cta-box" style="padding:1.2em 2em;">
+            <h3 style="font-size:1.2em; margin-bottom:0.3em;">기록이 쌓이면, 살핌이 시작됩니다</h3>
+            <p style="font-size:0.85em;">학교의 필요에 맞춰 유연하게 도입하고, 함께 발전시켜 나가겠습니다.</p>
           </div>
         </div>
       </section>
